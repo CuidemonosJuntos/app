@@ -2,11 +2,13 @@ import React, { Component } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 import { connect } from 'react-redux';
 
+import './App.css';
 import * as actions from '../actions';
-import Header from './Header';
-import Landing from './Landing';
+//import Header from './Header/Header';
+import Landing from './Landing/Landing';
+import Dashboard from './Dashboard/Dashboard';
 
-const Dashboard = () => <h2>Dashboard</h2>
+
 const ServiceNew = () => <h2>ServiceNew</h2>
 
 class App extends Component {
@@ -19,7 +21,7 @@ class App extends Component {
       <div className="container">
         <BrowserRouter>
           <div>
-            <Header />
+            {/* <Header /> */}
             <Route path="/" exact component={Landing}/>
             <Route path="/dashboard" exact component={Dashboard}/>
             <Route path="/dashboard/new" component={ServiceNew}/>
@@ -31,3 +33,6 @@ class App extends Component {
 }
 
 export default connect(null, actions)(App);
+
+
+//<div className="container">

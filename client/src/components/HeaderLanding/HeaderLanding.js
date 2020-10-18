@@ -2,13 +2,16 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
-class Header extends Component {
+import './HeaderLanding.css';
+import logo from './assets/whitelogo.png';
+
+class HeaderLanding extends Component {
     renderContent(){
         switch(this.props.auth) {
             case null:
                 return null;
             case false:
-                return (<li><a href="/auth/google">Login With Google</a></li>)
+                return (<li><a href="/auth/google">Sign Up</a></li>)
             default:
                 return <li><a href="/api/logout">Logout</a></li>
         }
@@ -17,14 +20,16 @@ class Header extends Component {
     render() {
         return (
             <nav>
-                <div className="nav-wrapper">
+                <div className="row">
                     <Link 
                         to={this.props.auth ? '/dashboard' : '/'} 
-                        className="brand-logo"
                     >
-                        Cuidémonos Juntos
+                        <img className="brand-logo" src={logo} alt="Logo" />
                     </Link>
-                    <ul className="right">
+                    <ul className="main-nav">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">How it works</a></li>
+                        <li><a href="#">Ancient Wisdom</a></li>
                         <li>{this.renderContent()}</li>
                     </ul>
                 </div>
@@ -37,4 +42,4 @@ function mapStateToProps({ auth }) {
     return { auth }
 }
 
-export default connect(mapStateToProps)(Header)
+export default connect(mapStateToProps)(HeaderLanding)
