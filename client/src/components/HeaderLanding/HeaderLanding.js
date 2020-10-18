@@ -11,7 +11,7 @@ class HeaderLanding extends Component {
             case null:
                 return null;
             case false:
-                return (<li><a href="/auth/google">Sign Up</a></li>)
+                return (<li><a href="/auth/google">Regístrate</a></li>)
             default:
                 return <li><a href="/api/logout">Logout</a></li>
         }
@@ -27,9 +27,10 @@ class HeaderLanding extends Component {
                         <img className="brand-logo" src={logo} alt="Logo" />
                     </Link>
                     <ul className="main-nav">
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">How it works</a></li>
-                        <li><a href="#">Ancient Wisdom</a></li>
+                        <li><a href="#">Quiénes Somos</a></li>
+                        <li><a href="#">Lo que ofrecemos</a></li>
+                        <li><a href="#">Planes</a></li>
+                        <li><a href="#">Contacto</a></li>
                         <li>{this.renderContent()}</li>
                     </ul>
                 </div>
