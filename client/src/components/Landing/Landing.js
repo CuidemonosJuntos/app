@@ -2,6 +2,16 @@ import React from 'react';
 import './Landing.css';
 import HeaderLanding from '../HeaderLanding/HeaderLanding';
 
+import mountains1 from './assets/mountains1.png';
+import mountains2 from './assets/mountains2.png';
+import mountains3 from './assets/mountains3.png';
+import mountains4 from './assets/mountains4.png';
+import mountains5 from './assets/mountains5.png';
+import mountains6 from './assets/mountains6.png';
+import mountains7 from './assets/mountains7.png';
+import mountains8 from './assets/mountains8.png';
+
+
 
 const Landing = () => {
     return (
@@ -45,7 +55,57 @@ const Landing = () => {
                     </div>
                 </div>
             </section>
-            
+
+
+            <section className="section-mountains">
+                <ul className="mountains-showcase">
+                    <li>
+                        <figure className="mountains-photo">
+                            <img src={mountains1} alt="mountains1" />
+                        </figure>
+                    </li>
+                    <li>
+                        <figure className="mountains-photo">
+                            <img src={mountains2} alt="mountains2" />
+                        </figure>
+                    </li>
+                    <li>
+                        <figure className="mountains-photo">
+                            <img src={mountains3} alt="mountains3" />
+                        </figure>
+                    </li>
+                    <li>
+                        <figure className="mountains-photo">
+                            <img src={mountains4} alt="mountains4" />
+                        </figure>
+                    </li>
+                </ul>
+
+                <ul className="mountains-showcase">
+                    <li>
+                        <figure className="mountains-photo">
+                            <img src={mountains5} alt="mountains5" />
+                        </figure>
+                    </li>
+                    <li>
+                        <figure className="mountains-photo">
+                            <img  src={mountains6} alt="mountains6" />
+                        </figure>
+                    </li>
+                    <li>
+                        <figure className="mountains-photo">
+                            <img src={mountains7} alt="mountains7" />
+                        </figure>
+                    </li>
+                    <li>
+                        <figure className="mountains-photo">
+                            <img src={mountains8} alt="mountains8" />
+                        </figure>
+                    </li>
+                </ul>
+
+            </section>
+
         </>
     )
 }
