@@ -10,6 +10,7 @@ import mountains5 from './assets/mountains5.png';
 import mountains6 from './assets/mountains6.png';
 import mountains7 from './assets/mountains7.png';
 import mountains8 from './assets/mountains8.png';
+import multielements from './assets/multielements.png';
 
 
 
@@ -58,7 +59,7 @@ const Landing = () => {
 
 
             <section className="section-mountains">
-                <ul className="mountains-showcase">
+                <ul className="mountains-showcase clearfix">
                     <li>
                         <figure className="mountains-photo">
                             <img src={mountains1} alt="mountains1" />
@@ -81,7 +82,7 @@ const Landing = () => {
                     </li>
                 </ul>
 
-                <ul className="mountains-showcase">
+                <ul className="mountains-showcase clearfix">
                     <li>
                         <figure className="mountains-photo">
                             <img src={mountains5} alt="mountains5" />
@@ -104,6 +105,38 @@ const Landing = () => {
                     </li>
                 </ul>
 
+            </section>
+
+
+
+            <section className="section-steps">
+                <div className="row">
+                    <h2>¿Cómo funciona? &mdash; Tierra, Agua, Aire y Fuego</h2>
+                </div>
+
+                    <div className="row">
+                        <div className="col span-1-of-2 steps-box">
+                            <img src={multielements} className="elements-screen" alt="multielements"/>
+                        </div>
+                        <div className="col span-1-of-2 steps-box">
+                            <div className="works-step">
+                                <div>1</div>
+                                    <p>Tierra: Sed pretium, eros ut molestie placerat, enim risus maximus magna.  </p>
+                            </div>
+                            <div className="works-step">
+                                    <div>2</div>
+                                    <p>Aire: Sed pretium, eros ut molestie placerat, enim risus maximus magna.</p>
+                            </div>
+                            <div className="works-step">
+                                <div>3</div>
+                                <p>Fuego: Sed pretium, eros ut molestie placerat, enim risus maximus magna.</p>
+                            </div>
+                            <div className="works-step">
+                                <div>4</div>
+                                <p>Agua: Sed pretium, eros ut molestie placerat, enim risus maximus magna.</p>
+                            </div>
+                        </div>
+                    </div>
             </section>
 
         </>
